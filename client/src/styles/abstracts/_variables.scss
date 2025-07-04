@@ -1,0 +1,145 @@
+// abstracts/_variables.scss
+
+/**
+ * Root variables to this project
+ * 1. 🎨 Color palett
+ * 2. 🔤 Typograph
+ * 3. 📐 Sizing (fonts, padding, margin..)
+ * 4. 🌀 Transitio
+ * 5. 🧭 Z-index
+ * 6. Borders
+ * 7. Breakpoints
+ * 8. 🔘 Radius Borders
+ */
+
+// -----------------------------
+// 🎨 Color palette
+// -----------------------------
+$color-primary: #007bff;
+$color-primary-light: lighten($color-primary, 10%);
+$color-primary-dark: darken($color-primary, 10%);
+
+$color-secondary: #6c757d;
+$color-success: #28a745;
+$color-danger: #dc3545;
+$color-warning: #ffc107;
+$color-info: #17a2b8;
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gray-900: #212529;
+
+$color-gray-99: #b5b5b5;
+$color-gray-90: #909090;
+$color-gray-88: #2c2c2c;
+$color-gray-83: #a8a8a8;
+$color-gray-80: #b5b5b5;
+$color-gray-77: #737373;
+$color-gray-75: #b6b6b6;
+$color-gray-66: #d4d4d4;
+$color-gray-55: #737373;
+$color-gray-50: #b6b6b6;
+$color-gray-44: #a4a4a4;
+$color-gray-40: #b3b3b3;
+$color-gray-33: #b5b5b5;
+$color-gray-25: #eaeaea;
+$color-gray-17: #adadad;
+$color-gray-16: #f6f6f6;
+$color-gray-15: #f5f5f5;
+$color-gray-12: #ededed;
+$color-gray-10: #fafafa;
+
+$base-app-background-color: $color-white;
+$base-app-text-color: $color-black;
+
+
+// -----------------------------
+//        📐 Sizing
+// -----------------------------
+$base-scale: 1.250;
+$base-h1-size: 61.04px;
+$base-h2-size: 48.83px;
+$base-h3-size: 39.06px;
+$base-h4-size: 31.25px;
+$base-h5-size: 25px;
+$base-h6-size: 20px;
+$base-p-size: 16px;
+$base-small-size: 12.8px;
+$base-tiny-size: 10.24px;
+// -----------------------------
+//          📐 Spacing
+// -----------------------------
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// -----------------------------
+//        🔤 Typography
+// -----------------------------
+// -----------------------------
+//        🔤 Font Family
+// -----------------------------
+$font-family-base: 'Inter', sans-serif;
+$font-family-manrope: 'Manrope', sans-serif;
+$font-family-poppins: 'Poppins', sans-serif;
+
+// -----------------------------
+//        🔤 Fonts sizes
+// -----------------------------
+$base-font-weight: 400; // important base
+$font-size-base: 16px;
+
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+$line-height-base: 1.5;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// -----------------------------
+// 📱 Breakpoints (importados o definidos aquí)
+// -----------------------------
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// -----------------------------
+// 🧱 Border radius
+// -----------------------------
+$border-radius-sm: 2px;
+$border-radius: 4px;
+$border-radius-lg: 8px;
+
+// -----------------------------
+// 🧭 Z-index
+// -----------------------------
+$z-index-dropdown: 1000;
+$z-index-modal: 1050;
+$z-index-tooltip: 1080;
+
+// -----------------------------
+// 🌀 Transition
+// -----------------------------
+$transition-default: 0.3s ease-in-out;
+$transition-fast: 0.15s ease-in-out;
+$transition-slow: 0.6s ease-in-out;
+
+// -----------------------------
+// 🎨 Shadows
+// -----------------------------
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.1);
+
+// -----------------------------
+// 🎨 Opacity
+// -----------------------------
+$opacity-25: 0.25;
+$opacity-50: 0.5;
+$opacity-75: 0.75;
+$opacity-100: 1;
+
+
+

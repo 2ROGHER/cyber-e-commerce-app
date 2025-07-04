@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use "./styles/main.scss" as *;
+
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-base;
+  // background: $base-app-background-color;
+  background-color: #000;
+  // color: $base-app-text-color;
+  color: #fff;
+  font-weight: $base-font-weight;
+}
+
+ul,
+ol {
+  padding-inline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: red !important;
+}
