@@ -1,0 +1,6 @@
+@use "../../../../../../styles/main.scss" as *;
+
+.category-body-list {
+  @include flex-align(center, center,row, 2rem);
+  margin: 0 !important;
+}

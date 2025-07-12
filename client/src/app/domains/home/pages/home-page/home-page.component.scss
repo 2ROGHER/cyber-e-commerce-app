@@ -1,0 +1,22 @@
+@use "../../../../../styles/main.scss" as *;
+.home {
+  height: 100vh;
+
+  // Styles to products banner
+  .products-banner {
+  }
+
+  // Styles to only banner section
+  .banner-section {
+    position: relative;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+
+      li {
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@use "../../../../../../styles/main.scss" as *;
+
+.product-card {
+  position: relative;
+  width: 268px !important;
+  // height: 432px !important;
+  background: #f6f6f6;
+  border-radius: 9px;
+
+  &-item {
+    position: relative;
+    // width: 100%;
+    height: 100%;
+    padding: $spacing-lg $spacing-md;
+    @include flex-align(center, center, column, 1rem);
+
+    &-header {
+      width: 100%;
+      @include flex-align(center, flex-end, row);
+
+      button {
+        @include flex-align(center, center);
+        padding: 0.2rem;
+        border-radius: 4px;
+
+        svg {
+          cursor: pointer;
+
+          &:hover {
+            fill: red;
+            path {
+              &:hover {
+                stroke: red;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-body {
+      @include flex-align(center, center, column);
+
+      h4,
+      h3 {
+        font-size: $font-size-md;
+        font-weight: $font-weight-medium;
+      }
+      h3 {
+        font-size: $font-size-sm;
+      }
+
+      p {
+        margin: 1rem 0;
+        font-size: $font-size-xl;
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
+}

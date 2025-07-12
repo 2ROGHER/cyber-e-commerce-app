@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { SharedModule } from "../../shared/shared.module";
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [NavBarComponent],
-  imports: [SharedModule],
+  declarations: [],
+  imports: [
+    CommonModule, // This module is used to import common directives, pipes, and services
+  ],
   exports: [],
 })
 export class CommonLayoutsModule {}

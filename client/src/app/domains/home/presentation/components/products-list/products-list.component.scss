@@ -1,0 +1,11 @@
+@use "../../../../../../styles/main.scss" as *;
+.products {
+  position: relative;
+  // background: purple;
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); // Responsive
+    gap: 1rem;
+  }
+}

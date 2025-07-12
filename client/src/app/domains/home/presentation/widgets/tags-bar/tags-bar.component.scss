@@ -1,0 +1,26 @@
+@use "../../../../../../styles/main.scss" as *;
+.tag-bar {
+  ul {
+    position: relative;
+    @include flex-align(center, start, row, $spacing-xl);
+    width: 100% !important; // contains all container
+
+    li {
+      padding: 4px !important;
+      a {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-medium;
+        color: #8b8b8b; // inactive links color
+        span {
+          // Styles for span element
+        }
+      }
+    }
+  }
+}
+
+.active {
+  color: #000000;
+  border-bottom: 2px solid #000000;
+
+}

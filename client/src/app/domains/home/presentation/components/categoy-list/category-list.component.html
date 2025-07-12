@@ -1,0 +1,5 @@
+<ul class="category-body-list" aria-atomic="true" aria-label="Category List">
+  <ng-container *ngFor="let i of categoryItemProperties; let index = index">
+    <app-category-list-item [properties]="i"></app-category-list-item>
+  </ng-container>
+</ul>

@@ -1,1 +1,36 @@
-<p>home-page works!</p>
+<main class="home">
+  <!-- NavigationBar section -->
+  <app-nav-bar></app-nav-bar>
+  <!-- Banner section -->
+  <app-banner></app-banner>
+
+  <!-- Categories section -->
+  <app-category></app-category>
+
+  <!-- Products banner -->
+  <section class="products-banner">
+    <app-products-banner></app-products-banner>
+  </section>
+
+  <!-- Banners section -->
+  <section class="banner-section">
+    <ul class="banner-section-list">
+      <ng-container *ngFor="let i of [1, 2, 3, 4]; let index = index">
+        <li class="banner-list-item" aria-label="Banner list item">
+          <app-banner-card></app-banner-card>
+        </li>
+      </ng-container>
+    </ul>
+  </section>
+
+  <!-- Outsale section -->
+  <app-out-sale [outSaleProperties]="outSaleProperties"></app-out-sale>
+
+  <!-- Sale banner section -->
+  <app-sale-banner [saleBannerProperties]="saleBannerProps"></app-sale-banner>
+
+  <!-- Footer section -->
+  <app-footer></app-footer>
+
+
+</main>

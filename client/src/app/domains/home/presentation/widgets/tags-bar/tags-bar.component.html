@@ -1,0 +1,17 @@
+<div class="tag-bar">
+  <ul class="tag-bar-list">
+    <ng-content *ngFor="let i of tagBarItems">
+      <!-- Change the directive to add  dinamic class with servies when we call to API to get tags -->
+      <li class="tag-bar-list-item" [ngClass]="i.id == 1 ? 'active' : ''" aria-label="Tags items" >
+        <a
+          class="tag-bar-list-link-item"
+          aria-label="Tag List Item"
+          [routerLink]="['/routePath']"
+          routerLinkActive="router-link-active"
+        >
+          <span>{{ i.name }}</span>
+        </a>
+      </li>
+    </ng-content>
+  </ul>
+</div>

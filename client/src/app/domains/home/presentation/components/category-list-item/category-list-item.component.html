@@ -1,0 +1,18 @@
+<ng-container *ngIf="true">
+  <!--  (Accessible Rich Internet Applications) <> aria-*-->
+  <li class="category-body-list-item" aria-label="Category Item" [id]="properties.id">
+    <a
+      aria-label="Category Link"
+      [routerLink]="['/path-to-products']"
+      routerLinkActive="router-link-active"
+      class="category-body-list-item-link"
+      aria-current="page"
+      aria-atomic="true"
+    >
+      <span class="category-body-list-item-svg" [innerHTML]="properties.picture">
+        <!-- Here goes all svg list-->
+      </span>
+      <p>{{ properties.categoryName }}</p>
+    </a>
+  </li>
+</ng-container>

@@ -1,0 +1,13 @@
+@use "../../../../../styles/main.scss" as *;
+
+.button {
+  border: 1px solid $base-app-background-color;
+  font-family: $font-family-base;
+  font-weight: $font-weight-medium;
+  border-radius: 6px;
+  font-size: $font-size-sm;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 1rem calc(56 / 16) + rem;
+
+}

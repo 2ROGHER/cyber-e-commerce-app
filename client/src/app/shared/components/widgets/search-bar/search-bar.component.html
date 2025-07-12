@@ -1,0 +1,41 @@
+<form class="search-bar-form" role="search" aria-label="Search">
+  <div class="search-bar-icon">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+      color="#989898"
+      fill="none"
+    >
+      <path
+        d="M17 17L21 21"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+      <path
+        d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  </div>
+  <input
+    type="text"
+    role="searchbox"
+    aria-label="Search"
+    name="search"
+    class="search-bar-input"
+    placeholder="Search products, categories, brands..."
+    aria-label="Search"
+    spellcheck="false"
+    autocomplete="on"
+    [ngStyle]="{ width: '372px' }"
+  />
+
+  <span class="input-measurer" aria-hidden="true"></span>
+</form>

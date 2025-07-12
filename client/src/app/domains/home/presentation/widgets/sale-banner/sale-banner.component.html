@@ -1,0 +1,21 @@
+<div class="sale-banner">
+  <div class="sale-banner-background"></div>
+
+  <div class="sale-banner-info">
+    <div class="sale-banner-info-title">
+      <h1>{{ saleBannerProperties.title }}</h1>
+      <h4>{{ saleBannerProperties.description }}</h4>
+    </div>
+
+    <app-button
+       [properties]="{
+        color: '#ffffff',
+        backgroundColor: 'transparent',
+        borderColor: '#ffffff',
+        label: 'show now',
+        height: '50px',
+        width: '200px'
+      }"
+    ></app-button>
+  </div>
+</div>

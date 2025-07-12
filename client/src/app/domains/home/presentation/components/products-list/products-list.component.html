@@ -1,0 +1,7 @@
+<div class="products">
+  <ul class="products-list">
+    <ng-container *ngFor="let i of productList; let index = index" >
+      <app-product-card [product]="i"></app-product-card>
+    </ng-container>
+  </ul>
+</div>

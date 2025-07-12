@@ -1,0 +1,31 @@
+@use "../../../../../../styles/main.scss" as *;
+.sale-banner {
+  background: rgb(105, 95, 95);
+  position: relative;
+  height: calc(448 / 16) + rem;
+
+  &-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: calc(40 / 16) + rem;
+    &-title {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      h1 {
+        font-size: calc(74 / 16) + rem;
+        font-weight: $font-weight-thin;
+      }
+      h4 {
+        font-size: $font-size-sm;
+        color: #787878;
+        font-weight: $font-weight-regular;
+      }
+    }
+  }
+}

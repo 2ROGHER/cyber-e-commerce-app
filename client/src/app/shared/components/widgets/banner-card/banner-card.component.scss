@@ -1,0 +1,26 @@
+@use "../../../../../styles/main.scss" as *;
+.banner-card {
+  position: relative;
+  background: #f9f9f9;
+  padding: $spacing-xl;
+  @include flex-align(center, center, row, 1rem);
+
+  &-header {
+  }
+
+  &-body {
+    @include flex-align(flex-start, center, column, 1rem);
+
+    h1 {
+      font-size: calc(33/16) + rem;
+      font-weight: $font-weight-semibold;
+
+    }
+
+    h6 {
+      font-size: $font-size-p;
+      font-weight: $font-weight-thin;
+      color: $color-gray-90;
+    }
+  }
+}

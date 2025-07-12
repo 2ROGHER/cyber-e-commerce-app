@@ -1,3 +1,4 @@
+
 /* You can add global styles to this file, and also import other style files */
 
 @use "./styles/main.scss" as *;
@@ -12,15 +13,20 @@
 body {
   font-family: $font-family-base;
   // background: $base-app-background-color;
-  background-color: #000;
-  // color: $base-app-text-color;
-  color: #fff;
+  background-color: $base-app-background-color;
+  color: $base-app-text-color;
   font-weight: $base-font-weight;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 ul,
 ol {
   padding-inline: 0;
+  margin-block-end: 0;
+  margin-block: 0;
 }
 
 li {
@@ -29,8 +35,29 @@ li {
 
 a {
   text-decoration: none;
+  color: $color-black;
 }
 
 a:visited {
-  color: red !important;
+  color: none;
+  font-weight: none;
+}
+
+h1,
+h3,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+  padding-inline: 0;
+  padding-block: 0;
 }

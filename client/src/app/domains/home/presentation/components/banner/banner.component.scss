@@ -1,0 +1,34 @@
+@use "../../../../../../styles/main.scss" as *;
+
+/**
+ * Banner component styles
+ * TODO("Add more styles to customize the banner component")
+ */
+.banner-container {
+  font-family: $font-family-base;
+  background: linear-gradient(45deg, #211c24, #211c24);
+  height: $base-banner-height;
+
+  .banner-content {
+    @include flex-align(flex-start, center, column);
+    gap: .5rem;
+    color: $base-app-text-color;
+    padding: 0 16rem;
+    width: 100%;
+    height: 100%;
+    // background: yellow;
+    .banner-title {
+      font-size: 6rem;
+      font-weight: $font-weight-thin;
+      strong {
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    .banner-subtitle {
+      font-size: $font-size-md;
+      font-weight: $font-weight-light;
+      color: #909090;
+    }
+  }
+}

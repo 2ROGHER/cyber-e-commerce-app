@@ -1,0 +1,56 @@
+@use "../../../../../styles/main.scss" as *;
+
+.footer {
+  position: relative;
+  background: $color-black;
+  color: $base-app-text-color;
+  padding: 104px 16rem;
+
+  &-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+
+    &-logo {
+      color: $color-white;
+
+      h5 {
+        font-weight: $font-weight-medium;
+        font-size: $font-size-p;
+      }
+    }
+    &-services,
+    &-buyer {
+      color: $color-white;
+
+      div {
+        font-weight: $font-weight-semibold;
+        font-size: $font-size-sm;
+        padding-bottom: 8px;
+      }
+
+      ul {
+        @include flex-align(flex-start, center, column, 8px);
+
+        li a {
+          color: $color-white;
+          font-weight: $font-weight-extralight;
+          font-size: $font-size-p;
+        }
+      }
+    }
+  }
+  &-social-icons {
+    position: relative;
+    ul {
+      @include flex-align(center, flex-start, row, 1rem);
+
+      li,
+      a,
+      span {
+        @include flex-align(center, center);
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use "../../../../../styles/main.scss" as *;
+
+.nav-bar {
+  @include flex-align(center, space-between, row, 0);
+  padding: $spacing-md 10rem;
+
+  .navigation-links-container {
+    ul {
+      @include flex-align(center, space-between, row, 0);
+      gap: calc(50 / 16) + rem;
+
+      li {
+
+        a {
+          color: $base-navigation-links-color;
+          font-size: $font-size-base;
+          font-weight: $font-weight-medium;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+
+          &:active {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+  .tools-container {
+    .tools {
+      @include flex-align(center, center, row, 0);
+      gap: calc(24 / 16) + rem;
+      color: $base-navigation-links-color;
+      font-size: $font-size-base;
+      font-weight: $font-weight-medium;
+      text-decoration: none;
+      li {
+        @include flex-align(center, center, row, 0);
+        padding: $spacing-xs;
+        border-radius: $spacing-xs;
+        &:hover {
+          background: yellowgreen;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

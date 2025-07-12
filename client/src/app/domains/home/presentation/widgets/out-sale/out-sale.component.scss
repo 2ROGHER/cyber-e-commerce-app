@@ -1,0 +1,12 @@
+@use "../../../../../../styles/main.scss" as *;
+.outsale {
+  padding: calc(80 / 16) + rem $base-horizontal-padding;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  h2 {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-medium;
+  }
+}

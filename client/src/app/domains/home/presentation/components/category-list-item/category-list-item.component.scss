@@ -1,0 +1,27 @@
+@use "../../../../../../styles/main.scss" as *;
+
+.category-body-list-item {
+  position: relative;
+  background: $color-gray-12 !important;
+  padding: $spacing-lg;
+  @include flex-align(center, center, row);
+  border-radius: 15px;
+
+  a {
+    @include flex-align(center, center, column);
+    
+    span {
+      // Styles to picture of the Category Card
+    }
+
+    p {
+      color: $base-app-text-color;
+      font-family: $font-family-base;
+      font-weight: $font-weight-semibold;
+    }
+    &:visited {
+      color: #000;
+      font-weight: $font-weight-semibold;
+    }
+  }
+}

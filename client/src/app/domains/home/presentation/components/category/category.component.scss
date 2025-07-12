@@ -1,0 +1,39 @@
+@use "../../../../../../styles/main.scss" as *;
+
+.category {
+  position: relative;
+  padding: 80px $base-horizontal-padding;
+  // Align items to center vertical
+  @include flex-align(_, _, column, $spacing-xl);
+
+  &-label {
+    @include flex-align(center, space-between, row);
+
+    h2 {
+      color: $color-black;
+      font-weight: $font-weight-medium;
+      font-size: $font-size-xl;
+      text-transform: capitalize;
+    }
+
+    &-buttons {
+      @include flex-align(center, center, row, 1rem);
+
+      button {
+        @include flex-align(center, center, row);
+        cursor: pointer;
+        padding: 0.3rem;
+        border-radius: $spacing-xs;
+        &:hover {
+          background: $color-gray-12;
+        }
+      }
+    }
+  }
+  &-body {
+    /*
+     * Important to customize the Category Banner
+     */
+    position: relative;
+  }
+}

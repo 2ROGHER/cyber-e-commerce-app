@@ -1,0 +1,13 @@
+@use "../../../../../../styles/main.scss" as *;
+
+.products-banner-container {
+  position: relative;
+
+  // Align to cener in a column all components
+  // @include flex-align(center, center, column);
+  padding: 56px  $base-horizontal-padding;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+
+}

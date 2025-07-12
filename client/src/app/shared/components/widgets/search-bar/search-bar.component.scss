@@ -1,0 +1,38 @@
+@use "../../../../../styles/main.scss" as *;
+
+.search-bar-form {
+  padding: $spacing-sm;
+  position: relative;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-sm;
+  background: $base-background-search-bar-color;
+  border-radius: $spacing-sm;
+  padding: 1rem;
+
+  .search-bar-icon {
+    @include flex-align(center, center, row, 0);
+  }
+
+  input[name="search"] {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: "Inter", sans-serif;
+    color: $base-navigation-links-color;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    &::placeholder {
+      color: $base-navigation-links-color;
+      font-weight: $font-weight-light;
+      font-size: $font-size-sm;
+      font-family: "Inter", sans-serif;
+    }
+  }
+}
