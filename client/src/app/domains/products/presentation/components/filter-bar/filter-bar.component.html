@@ -1,0 +1,8 @@
+<section class="filter-bar">
+  <ng-container *ngFor="let i of filterOptions; let k = index">
+    <app-drop-down-menu
+      [menuOptions]="['option 1', 'option 2', 'option 3', 'option 3']"
+      [label]="i"
+    ></app-drop-down-menu>
+  </ng-container>
+</section>

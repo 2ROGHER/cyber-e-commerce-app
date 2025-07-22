@@ -1,0 +1,40 @@
+@use "../../../../../styles/main.scss" as *;
+
+.pagination {
+  margin-top: calc(40 / 16) + rem;
+  ul {
+    @include flex-align(center, center, row, 8px);
+    width: 100%;
+
+    li {
+      width: 32px;
+      height: 32px;
+      button,
+      span {
+        @include flex-align(center, center, row);
+      }
+    }
+
+    li:not(li:first-child, li:last-child) {
+      background: $color-gray-16;
+      // padding: 4px 11px;
+      border-radius: 5px;
+      cursor: pointer;
+      @include flex-align(center, center, row);
+
+      button {
+        font-weight: $font-weight-medium;
+        font-size: 1rem;
+      }
+    }
+
+    li:first-child,
+    li:first-child {
+      @include flex-align(center, center, row);
+    }
+  }
+}
+
+.selected {
+  background-color: purple;
+}

@@ -1,0 +1,17 @@
+<li class="menu-list-item" aria-label="Menu List Item" role="listbox">
+  <input
+    type="checkbox"
+    class="menu-list-item-checkbox"
+    id="menu-list-item-checkbox"
+    aria-label="menu-list-item-checkbox"
+    class="menu-list-item"
+    role="option"
+    (click)="chooseItemListOption()"
+  />
+  <div class="menu-list-item-label">
+    <span for="menu-list-item-checkbox" class="menu-list-item-label">
+      {{ listItemLabel }}
+    </span>
+    <span id="counts">100</span>
+  </div>
+</li>

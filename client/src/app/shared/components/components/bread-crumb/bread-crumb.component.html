@@ -1,0 +1,22 @@
+<section class="bread-crumbs">
+  <ul class="bread-crumbs-list">
+    <ng-container *ngFor="let i of breadCrumbsList; let index = index">
+      <li class="bread-crumbs-list-item">
+        <a [routerLink]="['/routePath']" routerLinkActive="router-link-active"
+          ><span>{{ i.item }}</span></a
+        >
+      </li>
+      <span class="arrow-rigth">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
+        </svg>
+      </span>
+    </ng-container>
+  </ul>
+</section>

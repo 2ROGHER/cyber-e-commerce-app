@@ -1,0 +1,52 @@
+@use "../../../../../styles/main.scss" as *;
+
+.products-page {
+  position: relative;
+
+  &-content {
+    position: relative;
+    // display: flex;
+    display: grid;
+    grid-template-columns: 20% 80% !important; // Change the grid columns if is necessary
+    grid-template-rows: auto;
+    gap: 2rem;
+
+    padding: $spacing-lg $base-horizontal-padding;
+    // width: 100%;
+
+    &-filter-bar {
+      position: relative;
+    }
+    &-main {
+      position: relative;
+      width: 100%;
+
+      &-header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $spacing-lg;
+        @include flex-align(center, space-between, row);
+        
+        .products-selected {
+          span:first-child {
+            font-size: $font-size-lg;
+            font-weight: $font-weight-medium;
+
+            color: #6c6c6c;
+          }
+          span:last-child {
+            font-size: $font-size-lg;
+            font-weight: $font-weight-medium;
+            font-size: 20px;
+          }
+        }
+      }
+
+      &-body {
+        position: relative;
+        overflow: hidden;
+      }
+    }
+  }
+}

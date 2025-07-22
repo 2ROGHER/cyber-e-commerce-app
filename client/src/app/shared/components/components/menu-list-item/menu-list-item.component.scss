@@ -1,0 +1,21 @@
+@use "../../../../../styles/main.scss" as *;
+
+.menu-list-item {
+  position: relative;
+  @include flex-align(center, flex-start, row, 8px);
+  cursor: pointer;
+  padding: 12px 0;
+  color: $base-app-text-color;
+  font-family: $font-family-base;
+  font-weight: $font-weight-medium;
+  font-size: 15px;
+  text-transform: capitalize;
+
+  &-label {
+    span#counts {
+      font-size: 12px;
+      font-weight: $font-weight-regular;
+      color: #929292;
+    }
+  }
+}

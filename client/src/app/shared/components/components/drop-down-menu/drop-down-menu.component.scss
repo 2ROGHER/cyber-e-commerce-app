@@ -1,0 +1,18 @@
+@use "../../../../../styles/main.scss" as *;
+
+.dropdown {
+  position: relative;
+
+  &-label {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    @include flex-align(center, space-between, row);
+    padding: 12px 0;
+    border-bottom: 1px solid $color-gray-80;
+    color: $base-app-text-color;
+    font-family: $font-family-base;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-lg;
+  }
+}

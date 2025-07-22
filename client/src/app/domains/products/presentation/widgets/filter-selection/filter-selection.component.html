@@ -1,0 +1,43 @@
+<div
+  class="filter-menu"
+  [attr.aria-expanded]="isOpen"
+  aria-label="Dropdown Menu"
+>
+  <button
+    class="dropdown-label"
+    (click)="toggleDropdown()"
+    aria-haspopup="listbox"
+    [attr.aria-expanded]="isOpen"
+    type="button"
+  >
+    {{ selected || label | titlecase }}
+    <span class="arrow" [class.open]="isOpen"
+      ><svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        color="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 8.295L6 14.295L7.41 15.705L12 11.125L16.59 15.705L18 14.295L12 8.295Z"
+          fill="#9f9f9f"
+        />
+      </svg>
+    </span>
+  </button>
+
+  <ul class="dropdown-menu" *ngIf="isOpen" role="listbox">
+    <ng-container *ngFor="let i of filterOptions; let k = index">
+      <li
+        class="'dropdown-menu-item"
+        role="option"
+        aria-label="Menu List Item"
+        (click)="chooseOption(i)"
+      >
+        {{ i | titlecase }}
+      </li>
+    </ng-container>
+  </ul>
+</div>

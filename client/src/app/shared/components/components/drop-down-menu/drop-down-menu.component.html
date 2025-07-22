@@ -1,0 +1,21 @@
+<div class="dropdown" [attr.aria-expanded]="isOpen" aria-label="Dropdown Menu">
+  <button
+    class="dropdown-label"
+    (click)="toggleDropdown()"
+    aria-haspopup="listbox"
+    [attr.aria-expanded]="isOpen"
+    type="button"
+  >
+    {{ selected || label }}
+    <span class="arrow" [class.open]="isOpen">▼</span>
+  </button>
+
+  <ul class="dropdown-menu" *ngIf="isOpen" role="listbox">
+    <ng-container *ngFor="let i of menuOptions; let k = index">
+      <app-menu-list-item
+        [listItemLabel]="menuOptions[k]"
+        (listItemSelected)="chooseOption(menuOptions[k])"
+      ></app-menu-list-item>
+    </ng-container>
+  </ul>
+</div>

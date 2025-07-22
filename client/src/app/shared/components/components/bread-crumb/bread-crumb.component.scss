@@ -1,0 +1,17 @@
+@use "../../../../../styles/main.scss" as *;
+
+.bread-crumbs {
+  padding: calc(40 / 16) + rem $base-horizontal-padding;
+
+  ul {
+    @include flex-align(center, flex-start, row, 1rem);
+    li {
+      a {
+        span {
+          color: $color-gray-44;
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+}

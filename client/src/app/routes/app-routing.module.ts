@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from '../404.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -13,6 +12,13 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () =>
       import('../domains/home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'products',
+    loadChildren: () =>
+      import('../domains/products/products.module').then(
+        (m) => m.ProductsModule
+      ),
   },
   {
     path: 'auth',

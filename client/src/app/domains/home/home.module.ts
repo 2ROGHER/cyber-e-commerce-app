@@ -42,7 +42,7 @@ import { SaleBannerComponent } from './presentation/widgets/sale-banner/sale-ban
     HomeRoutingModule,
     SharedModule,
   ],
-  exports: [HomePageComponent],
+  exports: [HomePageComponent, ProductsListComponent],
   providers: [],
 })
 export class HomeModule {}

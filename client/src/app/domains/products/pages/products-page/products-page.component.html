@@ -1,1 +1,44 @@
-<p>products-page works!</p>
+<main class="products-page">
+  <!-- Navigation bar section -->
+  <app-nav-bar></app-nav-bar>
+  <!-- Bread crumb section -->
+  <app-bread-crumb></app-bread-crumb>
+
+  <!-- Products content section -->
+  <section class="products-page-content">
+    <!-- Filter bar section -->
+    <div class="products-page-content-filter-bar">
+      <app-filter-bar [filterOptions]="filterbarOptions"></app-filter-bar>
+    </div>
+    <!-- Products content section -->
+    <div class="products-page-content-main">
+      <div class="products-page-content-main-header">
+        <div class="products-selected">
+          <span>Selected Products: </span>
+          <span>{{ productsSelected }}</span>
+        </div>
+        <div class="products-filter">
+          <!-- <app-drop-down-menu></app-drop-down-menu> -->
+          <app-filter-selection
+            [filterOptions]="['option 1', 'option 2', 'option 3', 'option 3']"
+            [label]="'filter by'"
+          ></app-filter-selection>
+        </div>
+      </div>
+
+      <div class="products-page-content-main-body">
+        <app-products-list></app-products-list>
+      </div>
+
+      <!-- Pagination section -->
+      <app-pagination
+        [totalPages] = "50"
+        [currentPage] = "page"
+        [maxVisiblePages] = "4"
+        (pageChange)="onPageChange($event)"
+      ></app-pagination>
+    </div>
+  </section>
+
+  <app-footer></app-footer>
+</main>

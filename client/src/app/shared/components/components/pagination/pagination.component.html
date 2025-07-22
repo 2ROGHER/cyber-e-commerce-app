@@ -1,0 +1,95 @@
+<section class="pagination" aria-label="Pagination Navigation">
+  <ul class="pagination-list" role="listbox">
+    <!-- Previous Button -->
+    <li
+      class="pagination-list-item"
+      role="option"
+      [attr.aria-label]="'Previous Page'"
+      [class.disabled]="currentPage === 1"
+      (click)="goToPrevious()"
+    >
+      <button [disabled]="currentPage === 1" aria-hidden="true">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21.3333 27.6667C21.0678 27.6679 20.8131 27.5622 20.6266 27.3733L9.95993 16.7067C9.57 16.3162 9.57 15.6838 9.95993 15.2933L20.6266 4.62667C21.0206 4.25952 21.6346 4.27035 22.0154 4.65117C22.3962 5.03199 22.4071 5.64599 22.0399 6.04L12.0799 16L22.0399 25.96C22.4299 26.3504 22.4299 26.9829 22.0399 27.3733C21.8534 27.5622 21.5987 27.6679 21.3333 27.6667Z"
+            fill="black"
+          />
+        </svg>
+      </button>
+    </li>
+
+    <!-- First Page -->
+    <li
+      *ngIf="pages[0] > 1"
+      class="pagination-list-item"
+      role="option"
+      (click)="goToPage(1)"
+      [class.selected]="pages[0] === currentPage"
+    >
+      <button>1</button>
+    </li>
+
+    <!-- Dots before -->
+    <li *ngIf="pages[0] > 2" class="pagination-list-item dots">...</li>
+
+    <!-- Middle Pages -->
+    <li
+      *ngFor="let page of pages"
+      class="pagination-list-item"
+      role="option"
+      [class.selected]="page === currentPage"
+      [attr.aria-current]="page === currentPage ? 'page' : null"
+      (click)="goToPage(page)"
+    >
+      <button>{{ page }}</button>
+    </li>
+
+    <!-- Dots after -->
+    <li
+      *ngIf="pages[pages.length - 1] < totalPages - 1"
+      class="pagination-list-item dots"
+    >
+      ...
+    </li>
+
+    <!-- Last Page -->
+    <li
+      *ngIf="pages[pages.length - 1] < totalPages"
+      class="pagination-list-item"
+      role="option"
+      (click)="goToPage(totalPages)"
+    >
+      <button>{{ totalPages }}</button>
+    </li>
+
+    <!-- Next Button -->
+    <li
+      class="pagination-list-item"
+      role="option"
+      [attr.aria-label]="'Next Page'"
+      [class.disabled]="currentPage === totalPages"
+      (click)="goToNext()"
+    >
+      <button [disabled]="currentPage === totalPages" aria-hidden="true">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.6667 4.33333C10.9322 4.33208 11.1869 4.43782 11.3734 4.62667L22.0401 15.2933C22.43 15.6838 22.43 16.3162 22.0401 16.7067L11.3734 27.3733C10.9794 27.7405 10.3654 27.7296 9.98457 27.3488C9.60375 26.968 9.59292 26.354 9.96007 25.96L19.9201 16L9.96007 6.04C9.57013 5.64958 9.57013 5.01709 9.96007 4.62667C10.1466 4.43782 10.4013 4.33208 10.6667 4.33333Z"
+            fill="black"
+          />
+        </svg>
+      </button>
+    </li>
+  </ul>
+</section>

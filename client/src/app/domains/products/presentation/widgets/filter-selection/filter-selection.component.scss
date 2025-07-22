@@ -1,0 +1,37 @@
+@use "../../../../../../styles/main.scss" as *;
+
+.filter-menu {
+  position: relative;
+
+  button {
+    @include flex-align(center, center, row, 6rem);
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid $color-gray-66;
+    font-size: 15px;
+    font-weight: $font-weight-regular;
+    font-family: $font-family-base;
+    padding: calc(8 / 16) + rem 1rem;
+  }
+
+  ul {
+    position: absolute;
+    z-index: 10000 !important;
+    width: 100%;
+    background: $color-white;
+    margin-top: 8px;
+    border: 1px solid $color-gray-66;
+    border-radius: 8px;
+
+    li {
+      padding: calc(8 / 16) + rem 1rem;
+      cursor: pointer;
+      font-weight: $font-weight-regular;
+      font-size: 15px;
+
+      &:hover {
+        background: $color-gray-66;
+      }
+    }
+  }
+}
